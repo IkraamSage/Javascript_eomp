@@ -2,54 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="./stylesheets/styles.css" />
-    <title>Flask EOMP</title>
+    <link rel="stylesheet" href="stylesheets/styles.css" />
+    <title>Document</title>
   </head>
   <body>
-    <!-- CONTAINER -->
     <div class="container">
-      <!-- LOGIN -->
-      <div class="login-register-container">
-        <!-- LOGIN / REGISTER BUTTONS -->
-        <div class="login-register-buttons">
-          <button id="login">Login</button
-          ><button id="register">Register</button>
-        </div>
-        <!-- LOGIN FORM -->
-        <form action="" class="login-form">
-          <!-- USERNAME -->
-          <div class="login-info">
-            <label for="name" class="login-label">Username</label>
-            <input
-              type="text"
-              name="name"
-              id="username"
-              class="login-input"
-              required
-              placeholder="Username"
-            />
-          </div>
-          <!-- PASSWORD -->
-          <div class="login-info">
-            <label for="password" class="login-label">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              class="login-input"
-              required
-              placeholder="Password"
-            />
-          </div>
-          <button class="login-button">Login</button>
-        </form>
-        <!-- REGISTER FORM -->
-        <form action="" class="register-form"></form>
-      </div>
+      <h1>REDMAGIC</h1>
+      <form class="signIn active" onsubmit="login(document.querySelector('.username').value, document.querySelector('.password').value); return false">
+          <h2>Sign In</h1>
+          <input class="username" name="username" type="text" placeholder="Username"/>
+          <input class="password" name="password" type="password" placeholder="Password"/>
+          <a href="./test.html">login
+        </a>
+          <p>Haven't registered yet? <span class="switchButton">Click here</span></p>
+      </form>
+      <form class="register" action="">
+          <h2>Sign Up</h2>
+          <input class="firstName" type="text" name="first_name" placeholder="First Name">
+          <input class="lastName" type="text" name="last_name" placeholder="Last Name">
+          <input class="username" type="text" name="username" placeholder="Username">
+          <input class="email" type="email" name="email" placeholder="Email">
+          <input class="password" type="password" name="password" placeholder="Password">
+          <button class="signInButton">Register</button>
+          <p>Already registered? <span class="switchButton">Click here</span></p>
+      </form>
     </div>
-    <!-- SCRIPTS -->
-    <script src="./scripts/main.js"></script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>
