@@ -5,16 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheets/styles.css" />
-    <title>Document</title>
+    <title>POS</title>
   </head>
   <body>
+    <nav>
+      <ul class="menu">
+        <li><a href="./index.html" class="navbar-link">Home</a></li>
+        <li>
+          <a href="./products.html" class="navbar-link">Gaming Devices</a>
+        </li>
+        
+      </ul>
+      <button class="nav" onclick="toggleNav()">Menu</button>
+    </nav>
+    <div class="section">
     <div class="container">
       <h1>REDMAGIC</h1>
       <form class="signIn active" onsubmit="login(document.querySelector('.username').value, document.querySelector('.password').value); return false">
           <h2>Sign In</h1>
           <input class="username" name="username" type="text" placeholder="Username"/>
           <input class="password" name="password" type="password" placeholder="Password"/>
-          <a href="./test.html">login
+          <button type="submit" class="sign-in-btn">Sign In</button>
         </a>
           <p>Haven't registered yet? <span class="switchButton">Click here</span></p>
       </form>
