@@ -9,3 +9,23 @@ switchButtons.forEach((button) => {
     registerForm.classList.toggle("active");
   });
 });
+
+function login() {
+  let user = document.querySelector("#username").value;
+  let userpassword = document.querySelector("#password").value;
+  let userValues = { username: user, password: userpassword };
+
+  console.log(userValues);
+
+  fetch("https://sage-automation.herokuapp.com/user_login/", {
+    method: "POST",
+    body: JSON.stringify(userValues),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
+}
